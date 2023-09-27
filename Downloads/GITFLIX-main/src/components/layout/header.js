@@ -28,10 +28,10 @@ const Header = () => {
         <S.Logo src="img/githubicon.png"></S.Logo>
         <nav>
           <S.Ul>
-            <li>Now Playing</li>
-            <li>Popular</li>
-            <li>Top Rated</li>
-            <li>Upcoming</li>
+            <li onClick={() => navigate('/now-playing')}>Now Playing</li>
+            <li onClick={() => navigate('/popular')}>Popular</li>
+            <li onClick={() => navigate('/top-rated')}>Top Rated</li>
+            <li onClick={() => navigate('upcoming')}>Upcoming</li>
           </S.Ul>
         </nav>
         {searchBox ? (
@@ -80,7 +80,8 @@ const Ul = styled.div`
   padding-right: 590px;
   li {
     padding: 10px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: ${({theme}) => theme.FONT_WEIGHT.bold};
     cursor: pointer;
     ${flexAlignCenter}
     transition:color .2s ease;

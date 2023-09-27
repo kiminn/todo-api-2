@@ -9,7 +9,6 @@ const OneMovie = ({ movie_id, title, poster_path, overview, vote_average }) => {
   const [image, setImage] = useState({});
   const imgUrl = "https://image.tmdb.org/t/p/w200";
   // content, 평점 랜더링 여부를 state로 정의
-  const [isShowContent, setIsShowContent] = useState(false);
 
   const navigate = useNavigate();
 
